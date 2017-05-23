@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h3.
+        Masters
+    ul
+        each master, i in masterlist
+            li#masters_list_item
+                a(href="#") #{master.name} serves #{master.services.map(function(el){return el.name}).join(', ')}
