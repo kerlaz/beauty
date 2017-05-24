@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h3= title
+    form#form_add_master(name="addmaster", method="post", action="/addmaster")
+        span Name
+        span &nbsp;
+        input#input_name(type="text", placeholder="master", name="master")
+        br
+        br
+        button#submit_student(type="submit") submit
+
+

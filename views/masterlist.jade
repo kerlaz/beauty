@@ -3,7 +3,14 @@ extends layout
 block content
     h3.
         Masters
-    ul
+    div
         each master, i in masterlist
-            li#masters_list_item
-                a(href="#") #{master.name} serves #{master.services.map(function(el){return el.name}).join(', ')}
+            div#masters_list_item
+                div.master
+                h5 #{master.name}
+                div.serves
+                    ul
+                        each service in master.services
+                            li #{service.name}
+    div.footer
+        a(href="/newmaster") Add Master
